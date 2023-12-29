@@ -12,7 +12,7 @@ async def root():
 
 @app.post('/prediction')
 def prediction_house(house: Priceofhouse):
-    data = housae.dict()
+    data = house.dict()
     prediction = model.predict_house(data['LotArea'], data['OverallQual'], data['YearBuilt'], data['YearRemodAdd'],
                                      data['BsmtFinSF1'], data['BsmtUnfSF'], data['TotalBsmtSF'], data['GrLivArea'],
                                      data['FullBath'], data['BedroomAbvGr'], data['KitchenAbvGr'], data['TotRmsAbvGrd'],
